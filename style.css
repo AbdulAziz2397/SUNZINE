@@ -5,6 +5,7 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: "Aldrich", serif;
+    /* border: 1px solid red; */
 }
 body{
     width: 100%;
@@ -207,3 +208,75 @@ body{
 }
 
 /* ..................................... end display ............................................ */
+/* ..................................... start 2nd nav ............................................ */
+.second-nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.second-nav>ul{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.second-nav>ul>li{
+    color: rgba(0, 0, 0, 0.425);
+    margin: 0px 20px;
+    text-transform: uppercase;
+}
+.second-nav>ul>li:hover{
+    color: rgba(0, 0, 0);
+}
+/* ..................................... end 2nd nav ............................................ */
+
+
+/* ..................................... start content ............................................ */
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.subRow{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.item{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+.item>img{
+    width: 100%;
+}
+.item>p, .item>h1{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.item>p{
+    line-height: 90px;
+    margin-bottom: 10px;
+}
+.item>h1{
+    margin-top: 10px;
+}
+
+/* ..................................... end content ............................................ */
+
+
+
+

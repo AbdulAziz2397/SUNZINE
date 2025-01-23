@@ -6,7 +6,10 @@
     box-sizing: border-box;
     font-family: "Aldrich", serif;
 }
-
+body{
+    width: 100%;
+    
+}
 .nav {
     width: 100%;
     height: 85px;
@@ -17,6 +20,7 @@
     align-items: center;
     padding: 0px 60px;
     transition: all 0.3s;
+    position: relative;
 }
 
 .main-menu {
@@ -26,7 +30,7 @@
 
 .menu {
     transform: translateX(0px);
-    opacity: 100;
+    opacity: 1;
     transition: all 0.5s ease-in-out;
     pointer-events: auto;
 }
@@ -53,23 +57,15 @@
 .menu-logo {
     display: none;
 }
-
 .headerActions {
     display: flex;
-}
-
-.headerActions>div>i {
-    margin: 0px 18px;
-    font-size: 18px;
-    cursor: pointer;
 }
 
 #bars {
     display: none;
 }
-
-.action {
-    cursor: pointer;
+#menu-bars {
+    display: none;
 }
 
 .fa-solid:hover {
@@ -77,6 +73,8 @@
 }
 
 .fa-solid {
+    font-size: 18px;
+    margin: 0px 8px;
     padding: 5px;
 }
 
@@ -86,16 +84,18 @@
     transition: all 0.5s ease-in-out;
     pointer-events: none;
 }
+#menu-bars{
+    display: none;
+}
+.menu-bars{
+    display: none;
+}
 
 @media screen and (max-width: 990px) {
-    .nav {
-        position: relative;
-    }
-
     .menu {
         position: absolute;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         left: -270px;
         height: 100vh;
         background-color: white;
@@ -106,36 +106,63 @@
     .menu-logo {
         display: flex;
         width: 150px;
-        margin: 50px 0px 50px 10px;
+        margin: 50px 0px 30px 30px;
     }
-
+    
     .menu>ul {
-        width: 240px;
+        width: 220px;
+        height: auto;
         display: flex;
         flex-direction: column;
         list-style: none;
+        margin: 0px 0px 0px 15px;
+        transform: scaleY(0%);
+        transform-origin: top;
+        transition: all 0.3s;
+        background-color: rgb(90, 90, 90);
     }
-
+    
     .menu>ul>li {
         width: 100%;
         display: flex;
-        justify-content: center;
         padding: 0%;
         margin: 0%;
     }
-
+    
     .menu>ul>li>a {
-        background-color: grey;
         color: white;
         width: 100%;
-        padding: 10px 0px;
+        padding: 15px 0px;
+        background: none;
         text-align: center;
     }
-
+    
     #bars:checked~.menu {
         left: 0px;
-        opacity: 100;
+        opacity: 1;
         transform: translateX(0px);
+        pointer-events: auto;
+    }
+    .menu-bars{
+        display: block;
+        background-color: rgb(90, 90, 90);
+        color: white;
+        width: 220px;
+        padding: 15px 0px;
+        text-align: right;
+        margin: 0px 0px 0px 15px;
+        cursor: pointer;
+    }
+    .menu-bars>label{
+        color: white;
+        background-color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    #menu-bars:checked ~ .menu-list{
+        transform: scaleY(100%);
     }
 }
 

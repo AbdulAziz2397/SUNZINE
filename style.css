@@ -9,7 +9,7 @@
 }
 body{
     width: 100%;
-    
+    position: relative;
 }
 
 
@@ -25,6 +25,10 @@ body{
     padding: 0px 60px;
     transition: all 0.3s;
     position: relative;
+    position: sticky;
+    top: 0%;
+    background-color: white;
+    z-index: 100;
 }
 
 .main-menu {
@@ -98,6 +102,142 @@ body{
 .menu-bars{
     display: none;
 }
+
+/* ..................................... end navbar ............................................ */
+/* ..................................... start display ............................................ */
+
+.display{
+    width: 100%;
+    height: auto;
+    padding: 90px 15vw;
+}
+.display>h1{
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+/* ..................................... end display ............................................ */
+/* ..................................... start 2nd nav ............................................ */
+.second-nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.second-nav>ul{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.second-nav>ul>li{
+    color: rgba(0, 0, 0, 0.425);
+    margin: 0px 20px;
+    text-transform: uppercase;
+}
+.second-nav>ul>li:hover{
+    color: rgba(0, 0, 0);
+}
+/* ..................................... end 2nd nav ............................................ */
+
+
+/* ..................................... start content ............................................ */
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.subRow{
+    display: flex;
+    justify-content: center;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5px 5px;
+    position: relative;
+}
+.item>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.pANDh1{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    color: white;
+    transform: translateY(-50px);
+    opacity: 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+.pANDh1:hover{
+    transform: translateY(0px);
+    opacity: 100;
+    transition: all 0.5s;
+    display: block;
+}
+.item>img:hover ~ .pANDh1{
+    transform: translateY(0px);
+    transition: all 0.5s;
+    transition-delay: tranform 0.7s;
+    opacity: 100;
+}
+
+/* ..................................... end content ............................................ */
+/* ..................................... start footer ............................................ */
+.footer{
+    width: 100%;
+    height: 85px;
+    background-color: rgb(34,34,34);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+.para>p{
+    color: rgba(255, 255, 255, 0.596);
+    font-family: sans-serif;
+}
+span{
+    color: white;    
+    font-family: "Aldrich", serif;
+    cursor: pointer;
+}
+span:hover{
+    color: rgba(255, 123, 0, 0.863);
+}
+.actions{
+    color: white;
+}
+.actions>i{
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.para>p>i{
+    color: red;
+}
+/* ..................................... end footer ............................................ */
+
+
+
+
 
 @media screen and (max-width: 990px) {
     .menu {
@@ -176,25 +316,24 @@ body{
     #menu-bars:checked ~ .menu-list{
         transform: scaleY(100%);
     }
-}
-/* ..................................... end navbar ............................................ */
-/* ..................................... start display ............................................ */
-
-.display{
-    width: 100%;
-    height: auto;
-    padding: 90px 15vw;
-}
-.display>h1{
-    font-size: 35px;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 50px;
+    .row{
+        display: block;
+    }
+    .footer{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+    }
+    .para{
+        text-align: center;
+        margin: 20px 0px;
+    }
 }
 @media screen and (max-width: 575px) {
     .nav {
-        padding: 0px 10px;
+        padding: 0px 10px 0px 20px;
     }
     .display{
         padding: 90px 10px;
@@ -205,78 +344,8 @@ body{
         text-align: center;
         text-transform: uppercase;
     }
+    .subRow{
+        width: 100%;
+        display: block;
+    }
 }
-
-/* ..................................... end display ............................................ */
-/* ..................................... start 2nd nav ............................................ */
-.second-nav{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-.second-nav>ul{
-    padding: 20px 30px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.second-nav>ul>li{
-    color: rgba(0, 0, 0, 0.425);
-    margin: 0px 20px;
-    text-transform: uppercase;
-}
-.second-nav>ul>li:hover{
-    color: rgba(0, 0, 0);
-}
-/* ..................................... end 2nd nav ............................................ */
-
-
-/* ..................................... start content ............................................ */
-
-.content{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.row{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.subRow{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-.item{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-    position: relative;
-}
-.item>img{
-    width: 100%;
-}
-.item>p, .item>h1{
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-}
-.item>p{
-    line-height: 90px;
-    margin-bottom: 10px;
-}
-.item>h1{
-    margin-top: 10px;
-}
-
-/* ..................................... end content ............................................ */
-
-
-
-

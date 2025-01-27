@@ -284,7 +284,6 @@ span:hover{
         background: none;
         text-align: center;
     }
-    
     #bars:checked~.menu {
         left: 0px;
         opacity: 1;

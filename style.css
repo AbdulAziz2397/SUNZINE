@@ -55,6 +55,18 @@ body{
     margin: 0px 15px;
     padding: 0px 3px;
 }
+.menu>ul>li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.menu>ul>li:hover::after{
+    width: 100%;
+}
 
 .menu>ul>li>a {
     text-decoration: none;
@@ -64,6 +76,7 @@ body{
 }
 .menu>ul>li>a:hover{
     color: black;
+    transition: 0.5s;
 }
 
 .menu-logo {
@@ -139,7 +152,20 @@ body{
     text-transform: uppercase;
 }
 .second-nav>ul>li:hover{
+    transition: 0.5s;
     color: rgba(0, 0, 0);
+}
+.second-nav>ul>li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: black;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.second-nav>ul>li:hover::after{
+    width: 100%;
 }
 /* ..................................... end 2nd nav ............................................ */
 
